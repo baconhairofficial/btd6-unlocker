@@ -1,0 +1,36 @@
+BUILD NOTES
+
+This fork fixes the post-build output path so the compiled DLL copies into the correct BTD6 mods folder.
+
+Fixed output folder:
+...\BloonsTD6\Mods
+
+The original project may have references that point to another user's local BTD6 install path.
+
+If the project does not build, open BTD6Unlocker.csproj in Visual Studio and update the missing DLL references to match your own BTD6 installation.
+
+Common reference locations:
+
+...\BloonsTD6\Mods\Btd6ModHelper.dll
+...\BloonsTD6\MelonLoader\net6\
+...\BloonsTD6\MelonLoader\Il2CppAssemblies\
+
+References you may need:
+
+Btd6ModHelper.dll
+MelonLoader.dll
+0Harmony.dll
+Assembly-CSharp.dll
+Il2Cppmscorlib.dll
+Il2CppNinjaKiwi.LiNK.Client.dll
+UnityEngine.CoreModule.dll
+
+Build the project in Release mode.
+
+After building, place the compiled DLL here:
+
+...\BloonsTD6\Mods\BTD6Unlocker.dll
+
+Warning:
+
+Use mods at your own risk. BTD6 mods can flag accounts, so using an alt account is recommended.
